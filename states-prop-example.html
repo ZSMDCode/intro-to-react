@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkpoint 3 Components - Assignment</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  <script type="text/babel">
+  class SayHello extends React.Component {
+    constructor(props){
+      super(props);
+      this.state = {
+        number: 1
+      }
+    }
+    render(){
+      return (
+        <div>
+        <h1>Hello {this.props.name}</h1>
+        <h2>Times practicing states and props: {this.state.number}</h2>
+        <h3>Committed to Git: {this.props.trueorfalse}</h3>
+        </div>
+      );
+    }
+  }
+  ReactDOM.render(
+    <SayHello
+    name="Bloc"
+    trueorfalse="True"
+    />, document.getElementById('app')
+  );
+</script>
+</body>
+</html>
